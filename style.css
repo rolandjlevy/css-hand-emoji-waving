@@ -1,0 +1,45 @@
+body {
+  background-color: #000;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.hand {
+  display: inline-block;
+  font-size: 5rem;
+  animation-name: wave;
+  animation-duration: 2s;
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
+  animation-delay: 0s;
+  animation-timing-function: ease-out;
+  animation-play-state: paused;
+  transform-origin: 100% 75%;
+  cursor: pointer;
+}
+
+.hand.init {
+  animation-play-state: running;
+  animation-iteration-count: 1;
+}
+
+.hand:hover {
+  animation-play-state:running;
+  animation-iteration-count: infinite;
+}
+
+@keyframes wave {
+  0%, 100% { transform: rotate(0deg); }
+  10% { transform: rotate(30deg); }
+  20% { transform: rotate(0deg); }
+  30% { transform: rotate(30deg); }
+  40% { transform: rotate(0deg); }
+  50% { transform: rotate(30deg); }
+  60% { transform: rotate(0deg); }
+}
